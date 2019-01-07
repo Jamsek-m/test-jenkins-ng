@@ -25,7 +25,7 @@ pipeline {
         // dist/jenkins-ng
         stage("Building docker image") {
             steps {
-                sh "ls dist"
+                sh "ls dist/jenkins-ng"
             }
         }
     }
