@@ -18,6 +18,7 @@ pipeline {
 
         stage("Building Angular app") {
             steps {
+                sh "npm install"
                 sh "npm run build"
             }
         }
