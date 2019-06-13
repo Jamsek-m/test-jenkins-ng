@@ -15,17 +15,21 @@ pipeline {
                 git "https://github.com/Jamsek-m/test-jenkins-ng"
             }
         }
+        stage("npm install"){
+          steps {
+            sh "npm install"
+          }
+        }
 
         stage("Building Angular app") {
             steps {
-                sh "npm install"
                 sh "npm run build"
             }
         }
         // dist/jenkins-ng
         stage("Building docker image") {
             steps {
-                sh "ls dist/jenkins-ng"
+                sh "docker -v"
             }
         }
     }
