@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage("cloning git") {
             steps {
-                git "https://github.com/Jamsek-m/test-jenkins-ng"
+              git "${GIT_URL}"
             }
         }
         stage("npm install"){
