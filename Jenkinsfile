@@ -7,7 +7,7 @@ pipeline {
 
     tools {
         nodejs "nodejs-12.4.0"
-        mvn "maven-3.6.1"
+        maven "maven-3.6.1"
         jdk "jdk-12"
     }
 
