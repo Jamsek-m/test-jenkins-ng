@@ -7,6 +7,8 @@ pipeline {
 
     tools {
         nodejs "nodejs-12.4.0"
+        mvn "maven-3.6.1"
+        jdk "jdk-12"
     }
 
     stages {
@@ -32,5 +34,14 @@ pipeline {
                 sh "docker -v"
             }
         }
+      stage("Testing") {
+        steps {
+          sh "mvn -v"
+          sh "java -version"
+          sh "javac -version"
+          sh "node -v"
+          sh "npm -v"
+        }
+      }
     }
 }
