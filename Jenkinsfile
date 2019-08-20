@@ -36,6 +36,7 @@ pipeline {
         }
       stage("Testing") {
         steps {
+          sh "printenv"
           sh "mvn -v"
           sh "java -version"
           sh "javac -version"
