@@ -1,6 +1,6 @@
 pipeline {
     // environment {
-    //
+    // add env here
     // }
 
     agent any
